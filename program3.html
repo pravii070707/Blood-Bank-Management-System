@@ -1,0 +1,133 @@
+<?php ?> 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<body class="img js-fullheight" style="background-image: url(../imgs/n.jpg);"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<style> 
+* { 
+box-sizing: border-box; 
+} 
+input[type=text], select, textarea { 
+width: 100%; 
+padding: 10px; 
+border: 1px solid #ccc; 
+border-radius: 40px; 
+resize: vertical; 
+} 
+label { 
+padding: 12px 12px 12px 0; 
+display: inline-block; 
+} 
+input[type=submit] { 
+background-color: 
+color: black; 
+padding: 12px 20px; 
+border: none; 
+border-radius: 12px; 
+cursor: pointer; 
+float: center; 
+} 
+input[type=submit]:hover { 
+background-color: slategray; 
+} 
+.container { 
+border-radius: 10px; 
+background-color:#fcde67; 
+padding: 60px; 
+width: 50%; 
+float: right; 
+box-shadow: 7px 7px; 
+} 
+.col-25 { 
+float: left; 
+width: 25%; 
+} 
+margin-top: 6px; 
+.col-75 { 
+float: left; 
+width: 75%; 
+margin-top: 6px; 
+} 
+/* Clear floats after the columns */ 
+.row:after { 
+content: ""; 
+display: table; 
+clear: both; 
+} 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns 
+stack on top of each other instead of next to each other */ 
+@media screen and (max-width: 600px) { 
+.col-25, .col-75, input[type=submit] { 
+width: 80%; 
+margin-top: 0; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+ 
+ 
+<h2><center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ Blood Request Form</center></h2> 
+<p></p> 
+<center> 
+<div class="container"> 
+  <form action="../query/hosreq.php" method="POST"> 
+    <div class="row"> 
+      <div class="col-25"> 
+        <label for="pname">Patient Name</label> 
+      </div> 
+      <div class="col-75"> 
+        <input type="text" id="pname" name="pname" placeholder="pname"> 
+      </div> 
+    </div> 
+    <div class="row"> 
+      <div class="col-25"> 
+        <label for="lname">Hospital</label> 
+      </div> 
+      <div class="col-75"> 
+        <input type="text" id="lname" name="hospital" placeholder="hospital name"> 
+      </div> 
+    </div> 
+ 
+    <div class="row"> 
+      <div class="col-25"> 
+        <label for="country">Blood Type</label> 
+      </div> 
+      <div class="col-75"> 
+        <select id="blood" name="blood"> 
+          <option value="A+">A+</option> 
+          <option value="B+">B+</option> 
+          <option value="AB+">AB+</option> 
+           <option value="O+">O+</option> 
+          <option value="O-">O-</option> 
+          <option value="AB-">AB-</option> 
+        </select> 
+      </div> 
+    </div> 
+    <div class="row"> 
+      <div class="col-25"> 
+        <label for="subject">Unit</label> 
+      </div> 
+         <div class="col-75"> 
+        <input type="text" id="pname" name="unit" placeholder="number of packets"> 
+     <br><br><br><br><br> 
+    </div> 
+    <div class="row"> 
+      <center> 
+      <input type="submit"name="submit" value="Submit"> 
+    </center> 
+</div> 
+</form> 
+</center> 
+</div> 
+</body> 
+</html>
